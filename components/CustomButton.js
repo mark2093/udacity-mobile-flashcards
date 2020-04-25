@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { textGray, white, darkGray, black } from '../utils/colors';
-
 export default function CustomButton({ children, onPress, txtStyle = {} }) {
   return (
     <View style={styles.btnContainer}>
@@ -19,7 +17,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
      marginBottom: 20
   },
-  
+
   btnText: {
     fontSize: 20
   }
