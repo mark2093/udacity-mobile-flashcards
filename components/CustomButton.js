@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { textGray, white, darkGray, black } from '../utils/colors';
 
 export default function CustomButton({ children, onPress, txtStyle = {} }) {
   return (
@@ -14,20 +15,13 @@ export default function CustomButton({ children, onPress, txtStyle = {} }) {
 
 const styles = StyleSheet.create({
   btnContainer: {
-    // flex: 1,
-    // justifyContent: 'flex-end',
+    
     alignItems: 'center',
-    // borderWidth: 1,
-    // borderColor: 'blue',
-    marginBottom: 20
+     marginBottom: 20
   },
+  
   btnText: {
     fontSize: 20
   }
 });
 
-// CustomButton.propTypes = {
-//   children: PropTypes.string.isRequired,
-//   onPress: PropTypes.func.isRequired,
-//   txtStyle: PropTypes.object
-// };

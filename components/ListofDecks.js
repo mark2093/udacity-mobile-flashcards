@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import MainDeck from './MainDeck';
-import { navy, green,darkslateblue } from '../utils/colors';
+import { navy, darkslateblue } from '../utils/colors';
 import { handleInitialData } from '../actions/index';
 
 export class ListofDecks extends Component {

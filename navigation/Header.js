@@ -1,13 +1,7 @@
 import React from 'react';
 import * as Icon from '@expo/vector-icons';
-import {
-  createBottomTabNavigator,
-  
-} from 'react-navigation-tabs';
-import {
-    
-    createStackNavigator
-  } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 import ListofDecks from '../components/ListofDecks';
 import AddNewDeck from '../components/AddNewDeck';
 import DetailsMain from '../components/DetailsMain';
@@ -52,16 +46,6 @@ const routeConfigs = {
     }
   }
 };
-
-// routeConfigs.Decks.navigationOptions.tabBarIcon.propTypes = {
-//   tintColor: PropTypes.string.isRequired
-// };
-// routeConfigs.AddNewDeck.navigationOptions.tabBarIcon.propTypes = {
-//   tintColor: PropTypes.string.isRequired
-// };
-// routeConfigs.Config.navigationOptions.tabBarIcon.propTypes = {
-//   tintColor: PropTypes.string.isRequired
-// };
 
 const tabNavigatorConfig = {
   navigationOptions: {

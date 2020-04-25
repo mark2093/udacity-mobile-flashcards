@@ -1,43 +1,40 @@
 export const decks = {
-    React: {
-      title: 'React',
+    Music: {
+      title: 'Music',
       questions: [
         {
-          question: 'What is React?',
-          answer: 'A library for managing user interfaces'
+          question: 'How many Strings does a Violin Have?',
+          answer: 'Four'
         },
         {
-          question: 'Where do you make Ajax requests in React?',
-          answer: 'The componentDidMount lifecycle event'
+          question: 'The saxophone belongs to the family of',
+          answer: 'strings'
+        },
+        {
+          question: 'The String Instrument that is the smallest and highest sounding ?',
+          answer: 'Violin'
         }
       ]
     },
-    JavaScript: {
-      title: 'JavaScript',
+    IT: {
+      title: 'IT',
       questions: [
         {
-          question: 'What is a closure?',
-          answer:
-            'The combination of a function and the lexical environment within which that function was declared.'
+          question: 'RAM stores information about your computer when it is closed?',
+          answer:  'False'
+        },
+        {
+          question: 'OS made before Widows7',
+          answer:  'Windows Vista'
         }
       ]
     },
-    Redux: {
-      title: 'Redux',
+    Social: {
+      title: 'Social',
       questions: [
         {
-          question: 'What is Redux?',
-          answer: 'A predictable state container for JavaScript Apps'
-        },
-        {
-          question: 'What is an action creator?',
-          answer:
-            'It is a function that takes an input and returns an object with a type and data property.'
-        },
-        {
-          question: 'What is a reducer?',
-          answer:
-            'A reducer is a pure function that takes the current state and action and returns the next state.'
+          question: 'Facebook was Made by',
+          answer: 'Mark Zuckerberg'
         }
       ]
     }

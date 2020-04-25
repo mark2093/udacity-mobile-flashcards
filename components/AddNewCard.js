@@ -14,26 +14,26 @@ export class AddNewCard extends Component {
   //   addANewCard: PropTypes.func.isRequired
   // };
   state = {
-    question_asked: '',
-    questions_answered: ''
+    question: '',
+    answer: ''
   };
-  handleChangeofQuestion = question_asked => {
-    this.setState({ question_asked });
+  handleChangeofQuestion = question => {
+    this.setState({ question });
   };
-  handleChangeofAnswer = questions_answered => {
-    this.setState({ questions_answered });
+  handleChangeofAnswer = answer => {
+    this.setState({ answer });
   };
   handleSubmit = () => {
     const { addANewCard, title, navigation } = this.props;
     const card = {
-        question_asked: this.state.question_asked,
-        questions_answered: this.state.questions_answered
+        question: this.state.question,
+        answer: this.state.answer
     };
 
     addANewCard(title, card);
     addCardToDeckAS(title, card);
 
-    this.setState({ question_asked: '', questions_answered: '' });
+    this.setState({ question: '', answer: '' });
     navigation.goBack();
   };
   render() {
@@ -41,12 +41,12 @@ export class AddNewCard extends Component {
       <View style={styles.container}>
         <View>
           <View style={styles.block}>
-            <Text style={styles.title}>Add a question</Text>
+            <Text style={styles.title}>Add A New Question</Text>
           </View>
           <View style={[styles.block]}>
             <TextInput
               style={styles.input}
-              value={this.state.question_asked}
+              value={this.state.question}
               onChangeText={this.handleChangeofQuestion}
               placeholder="Question"
               autoFocus={true}
@@ -58,7 +58,7 @@ export class AddNewCard extends Component {
           <View style={[styles.block]}>
             <TextInput
               style={styles.input}
-              value={this.state.questions_answered}
+              value={this.state.answer}
               onChangeText={this.handleChangeofAnswer}
               placeholder="Answer"
               ref={input => {
@@ -69,9 +69,9 @@ export class AddNewCard extends Component {
             />
           </View>
           <CustomTouch
-            btnStyle={{ backgroundColor: green, borderColor: '#fff' }}
+            btnStyle={{ backgroundColor: 'green', borderColor: '#fff',} }
             onPress={this.handleSubmit}
-            disabled={this.state.question_asked === '' || this.state.questions_answered === ''}
+            disabled={this.state.question === '' || this.state.answer === ''}
           >
             Submit
           </CustomTouch>
@@ -97,7 +97,8 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontSize: 32
+    fontSize: 32,
+    fontWeight: 'bold'
   },
   input: {
     borderWidth: 1,
@@ -105,9 +106,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingLeft: 10,
     paddingRight: 10,
-    borderRadius: 5,
+    borderRadius: 15,
     fontSize: 20,
-    height: 40
+    height: 70
   }
 });
 

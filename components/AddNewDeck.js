@@ -59,7 +59,7 @@ export class AddNewDeck extends Component {
           />
         </View>
         <CustomTouch
-          btnStyle={{ backgroundColor: teal, borderColor: black }}
+          btnStyle={{ backgroundColor: teal, borderColor: black,borderRadius: 15 }}
           onPress={this.handleSubmit}
           disabled={this.state.text === ''}
         >
@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontSize: 32
+    fontSize: 32,
+    fontWeight:'bold'
   },
   input: {
     borderWidth: 1,
@@ -92,9 +93,9 @@ const styles = StyleSheet.create({
     backgroundColor: white,
     paddingLeft: 10,
     paddingRight: 10,
-    borderRadius: 5,
+    borderRadius: 15,
     fontSize: 20,
-    height: 40,
+    height: 70,
     marginBottom: 20
   }
 });

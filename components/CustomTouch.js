@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { textGray, white, darkGray, gray } from '../utils/colors';
+import { white, darkGray, gray } from '../utils/colors';
 
 export default function CustomTouch({
   children,
@@ -15,7 +14,6 @@ export default function CustomTouch({
   return (
     <View style={styles.btnContainer}>
       <TouchableOpacity
-        // style={[styles.btn, btnStyle, disabled ? styles.btnDisabled : null]}
         style={[styles.btn, btnStyle, disabledButton]}
         onPress={onPress}
         disabled={disabled}
@@ -24,7 +22,6 @@ export default function CustomTouch({
           style={[
             styles.btnText,
             txtStyle,
-            // disabled ? styles.btnTextDisabled : {}
             disabledButtonText
           ]}
         >
@@ -43,16 +40,17 @@ const styles = StyleSheet.create({
   btn: {
     width: 200,
     height: 50,
-    backgroundColor: 'red',
-    borderRadius: 5,
+    backgroundColor: 'black',
+    borderRadius: 15,
     justifyContent: `center`,
     alignItems: `center`,
-    borderWidth: 1,
+    borderWidth: 4,
     borderColor: '#999'
   },
   btnDisabled: {
     backgroundColor: gray,
-    borderColor: darkGray
+    borderColor: darkGray,
+    borderRadius: 15,
   },
   btnText: {
     fontSize: 20,
@@ -63,11 +61,3 @@ const styles = StyleSheet.create({
     color: darkGray
   }
 });
-
-// CustomTouch.propTypes = {
-//   children: PropTypes.string.isRequired,
-//   onPress: PropTypes.func.isRequired,
-//   btnStyle: PropTypes.object,
-//   txtStyle: PropTypes.object,
-//   disabled: PropTypes.bool
-// };

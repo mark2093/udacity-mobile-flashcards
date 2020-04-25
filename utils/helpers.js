@@ -6,7 +6,7 @@ import * as Permissions from 'expo-permissions';
 
 const NOTIFICATION_KEY = 'MobileFlashcard:notifications';
 const CHANNEL_ID = 'DailyReminder';
-//const granted = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+
 export function clearLocalNotification() {
   return AsyncStorage.removeItem(NOTIFICATION_KEY).then(
     Notifications.cancelAllScheduledNotificationsAsync

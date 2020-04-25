@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
 import CustomButton from './CustomButton';
 import CustomTouch from './CustomTouch';
-import { gray, green, red, textGray, orange, white ,black,slategray} from '../utils/colors';
+import {  green, red, textGray, orange, white, black, slategray } from '../utils/colors';
 import { connect } from 'react-redux';
 import { withNavigation } from 'react-navigation';
 import ViewPager from '@react-native-community/viewpager';
@@ -32,7 +32,7 @@ export class TestMain extends Component {
     answered: Array(this.props.deck.questions.length).fill(0)
   };
   handlePageChange = evt => {
-    // console.log('evt.nativeEvent.position', evt.nativeEvent.position);
+
     this.setState({
       show: screen.QUESTIONS_ASKED
     });
@@ -48,13 +48,11 @@ export class TestMain extends Component {
         answered: prevState.answered.map((val, idx) => (page === idx ? 1 : val))
       }),
       () => {
-        // console.log('this.state.answered', this.state.answered);
         const { right_answer, wrong_answer, questionCount } = this.state;
 
         if (questionCount === right_answer + wrong_answer) {
           this.setState({ show: screen.RESULT });
         } else {
-          // console.log('this.state.page', this.state.page);
           this.viewPager.setPage(page + 1);
           this.setState(prevState => ({
             show: screen.QUESTIONS_ASKED
@@ -103,7 +101,7 @@ export class TestMain extends Component {
               Quiz Complete!
             </Text>
             <Text style={resultStyle}>
-            {right_answer} / {questionCount} Correct
+              {right_answer} / {questionCount} Correct
             </Text>
           </View>
           <View style={styles.block}>
@@ -120,7 +118,7 @@ export class TestMain extends Component {
               Restart Quiz
             </CustomButton>
             <CustomButton
-              btnStyle={{ backgroundColor: gray, borderColor: textGray }}
+              btnStyle={{ backgroundColor: white, borderColor: white }}
               txtStyle={{ color: textGray }}
               onPress={() => {
                 this.handleReset();
@@ -130,7 +128,7 @@ export class TestMain extends Component {
               Back To Deck
             </CustomButton>
             <CustomButton
-              btnStyle={{ backgroundColor: gray, borderColor: textGray }}
+              btnStyle={{ backgroundColor: white, borderColor: textGray }}
               txtStyle={{ color: textGray }}
               onPress={() => {
                 this.handleReset();
@@ -180,13 +178,13 @@ export class TestMain extends Component {
                 Show Answer
               </CustomButton>
             ) : (
-              <CustomButton
-                txtStyle={{ color: orange }}
-                onPress={() => this.setState({ show: screen.QUESTIONS_ASKED })}
-              >
-                Show Question
-              </CustomButton>
-            )}
+                <CustomButton
+                  txtStyle={{ color: orange }}
+                  onPress={() => this.setState({ show: screen.QUESTIONS_ASKED })}
+                >
+                  Show Question
+                </CustomButton>
+              )}
             <View>
               <CustomTouch
                 btnStyle={{ backgroundColor: green, borderColor: white }}
@@ -225,7 +223,7 @@ const styles = StyleSheet.create({
   },
   block: {
     marginBottom: 20,
-    color:white
+    color: white
   },
   count: {
     fontSize: 24
@@ -233,11 +231,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     textAlign: 'center',
-    color:white
+    color: white
   },
   Container: {
     borderWidth: 2,
-    borderColor: black,
+    borderColor: white,
     backgroundColor: black,
     borderRadius: 5,
     paddingTop: 20,
@@ -253,8 +251,8 @@ const styles = StyleSheet.create({
   questionText: {
     textDecorationLine: 'underline',
     textAlign: 'center',
-    fontSize: 20,
-    color:white
+    fontSize: 35,
+    color: white
   },
   resultTextGood: {
     color: green,

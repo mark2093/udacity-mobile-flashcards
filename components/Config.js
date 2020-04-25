@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Text, View, StyleSheet } from 'react-native';
-import { gray, white, red, textGray, green } from '../utils/colors';
+import { gray, white, red, textGray, green,black } from '../utils/colors';
 import CustomTouch from './CustomTouch';
 import { resetDecks } from '../utils/api.js';
 import { connect } from 'react-redux';
@@ -53,9 +53,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 40,
+    fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 16,
-    color: green
+    color: black
   },
   block: {
     marginBottom: 20
