@@ -8,10 +8,10 @@ const mainDeck = props => {
   const { deck } = props;
 
   if (deck === undefined) {
-    return <View style={styles.deckContainer} />;
+    return <View style={styles.mainContainer} />;
   }
   return (
-    <View style={styles.deckContainer}>
+    <View style={styles.mainContainer}>
       <View>
         <Text style={styles.deckText}>{deck.title}</Text>
       </View>
@@ -26,7 +26,7 @@ mainDeck.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  deckContainer: {
+  mainContainer: {
     alignItems: 'center',
     justifyContent: 'center',
     flexBasis: 120,

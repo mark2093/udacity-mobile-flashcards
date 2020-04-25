@@ -25,7 +25,7 @@ export class ListofDecks extends Component {
     const { decks, navigation } = this.props;
 
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView style={styles.Stylecontainer}>
         <Text style={styles.title}>Mobile Flashcards</Text>
         {Object.values(decks).map(deck => {
           return (
@@ -39,25 +39,25 @@ export class ListofDecks extends Component {
             </TouchableOpacity>
           );
         })}
-        <View style={{ marginBottom: 30 }} />
+        <View style={{ marginBottom: 28 }} />
       </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  Stylecontainer: {
     flex: 1,
-    paddingTop: 16,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingBottom: 16,
+    paddingTop: 13,
+    paddingLeft: 13,
+    paddingRight: 13,
+    paddingBottom: 13,
     backgroundColor: gray
   },
   title: {
-    fontSize: 40,
+    fontSize: 35,
     textAlign: 'center',
-    marginBottom: 16,
+    marginBottom: 14,
     color: green
   }
 });

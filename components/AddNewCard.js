@@ -8,19 +8,19 @@ import { addANewCard } from '../actions/index';
 import { addCardToDeckAS } from '../utils/api';
 
 export class AddNewCard extends Component {
-  static propTypes = {
-    navigation: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
-    addANewCard: PropTypes.func.isRequired
-  };
+  // static propTypes = {
+  //   navigation: PropTypes.object.isRequired,
+  //   title: PropTypes.string.isRequired,
+  //   addANewCard: PropTypes.func.isRequired
+  // };
   state = {
     question_asked: '',
     questions_answered: ''
   };
-  handleQuestionChange = question_asked => {
+  handleChangeofQuestion = question_asked => {
     this.setState({ question_asked });
   };
-  handleAnswerChange = questions_answered => {
+  handleChangeofAnswer = questions_answered => {
     this.setState({ questions_answered });
   };
   handleSubmit = () => {
@@ -47,7 +47,7 @@ export class AddNewCard extends Component {
             <TextInput
               style={styles.input}
               value={this.state.question_asked}
-              onChangeText={this.handleQuestionChange}
+              onChangeText={this.handleChangeofQuestion}
               placeholder="Question"
               autoFocus={true}
               returnKeyType="next"
@@ -59,7 +59,7 @@ export class AddNewCard extends Component {
             <TextInput
               style={styles.input}
               value={this.state.questions_answered}
-              onChangeText={this.handleAnswerChange}
+              onChangeText={this.handleChangeofAnswer}
               placeholder="Answer"
               ref={input => {
                 this.answerTextInput = input;

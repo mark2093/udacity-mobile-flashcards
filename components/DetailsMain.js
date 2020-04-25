@@ -8,7 +8,7 @@ import { gray, textGray, green, white, red } from '../utils/colors';
 import { connect } from 'react-redux';
 import { deleteADeck } from '../actions/index';
 import { removeDeckAS } from '../utils/api';
-//import { NavigationActions } from 'react-navigation';
+
 
 export class DetailsMain extends Component {
   static propTypes = {
@@ -19,7 +19,7 @@ export class DetailsMain extends Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.deck !== undefined;
   }
-  handleDelete = id => {
+  handleDeleteDeck = id => {
     const { deleteADeck, navigation } = this.props;
 
     deleteADeck(id);
@@ -37,10 +37,11 @@ export class DetailsMain extends Component {
           <CustomTouch
             btnStyle={{ backgroundColor: white, borderColor: textGray }}
             txtStyle={{ color: textGray }}
-            onClick={this.props.navigation.navigate('AddNewCard', { title: deck.title })
+	    onPress={() =>
+  		this.props.navigation.navigate('AddNewCard', { title: deck.title })
             }
           >
-            Add Card
+            Add New Card
           </CustomTouch>
           <CustomTouch
             btnStyle={{ backgroundColor: green, borderColor: white }}
@@ -49,12 +50,12 @@ export class DetailsMain extends Component {
               this.props.navigation.navigate('Quiz', { title: deck.title })
             }
           >
-            Start Quiz
+            Start A Quiz
           </CustomTouch>
         </View>
         <CustomButton
           txtStyle={{ color: red }}
-          onPress={() => this.handleDelete(deck.title)}
+          onPress={() => this.handleDeleteDeck(deck.title)}
         >
           Delete Deck
         </CustomButton>
