@@ -1,6 +1,4 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-import { Platform } from 'react-native';
 import * as Icon from '@expo/vector-icons';
 import {
   createBottomTabNavigator,
@@ -17,9 +15,9 @@ import AddNewCard from '../components/AddNewCard';
 import Quiz from '../components/Quiz';
 import Config from '../components/Config';
 
-import { darkGray, white, green, lightGreen } from '../utils/colors';
+import { darkGray, white, teal,olive } from '../utils/colors';
 
-//const isIOS = Platform.OS === 'ios' ? true : false;
+
 
 const routeConfigs = {
   Decks: {
@@ -73,7 +71,7 @@ const tabNavigatorConfig = {
     bounces: true
   },
   tabBarOptions: {
-    activeTintColor: green,
+    activeTintColor: olive,
     style: {
       height: 60,
       backgroundColor: white,
@@ -109,9 +107,9 @@ const Header = createStackNavigator(
     DetailsMain: {
         screen: DetailsMain,
       navigationOptions: {
-        headerTintColor: green,
+        headerTintColor: white,
         headerStyle: {
-          backgroundColor: lightGreen
+          backgroundColor: teal
         },
         title: 'Deck Details'
       }
@@ -119,9 +117,9 @@ const Header = createStackNavigator(
     AddNewCard: {
       screen: AddNewCard,
     navigationOptions: {
-      headerTintColor: green,
+      headerTintColor: white,
       headerStyle: {
-        backgroundColor: lightGreen
+        backgroundColor: teal
       },
       headerTitleStyle: {
         justifyContent: 'center',
@@ -135,9 +133,9 @@ const Header = createStackNavigator(
     Quiz: {
         screen: Quiz,
       navigationOptions: {
-        headerTintColor: green,
+        headerTintColor: white,
         headerStyle: {
-          backgroundColor: lightGreen
+          backgroundColor: teal
         },
       title: 'Quiz'
       }

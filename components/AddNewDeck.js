@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Text, View, StyleSheet, TextInput } from 'react-native';
 import CustomTouch from './CustomTouch';
-import { gray, green, white, textGray } from '../utils/colors';
+import { gray,teal, green, white, textGray,black } from '../utils/colors';
 import { connect } from 'react-redux';
 import { addANewDeck } from '../actions/index';
 import { saveDeckTitleAS } from '../utils/api';
@@ -59,7 +59,7 @@ export class AddNewDeck extends Component {
           />
         </View>
         <CustomTouch
-          btnStyle={{ backgroundColor: green, borderColor: white }}
+          btnStyle={{ backgroundColor: teal, borderColor: black }}
           onPress={this.handleSubmit}
           disabled={this.state.text === ''}
         >

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
-import { white, textGray } from '../utils/colors';
+import { cadetblue, olive,black } from '../utils/colors';
 import { connect } from 'react-redux';
 
 const mainDeck = props => {
@@ -29,20 +29,20 @@ const styles = StyleSheet.create({
   mainContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    flexBasis: 120,
-    minHeight: 120,
-    borderWidth: 1,
-    borderColor: '#aaa',
-    backgroundColor: white,
-    borderRadius: 5,
+    flexBasis: 220,
+    minHeight: 200,
+    borderWidth: 5,
+    borderColor: black,
+    backgroundColor: cadetblue,
+    borderRadius: 8,
     marginBottom: 10
   },
   deckText: {
-    fontSize: 28
+    fontSize: 50
   },
   cardText: {
-    fontSize: 18,
-    color: textGray
+    fontSize: 25,
+    color: olive
   }
 });
 

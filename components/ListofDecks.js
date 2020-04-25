@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import MainDeck from './MainDeck';
-import { gray, green } from '../utils/colors';
+import { navy, green,darkslateblue } from '../utils/colors';
 import { handleInitialData } from '../actions/index';
 
 export class ListofDecks extends Component {
@@ -48,17 +48,18 @@ export class ListofDecks extends Component {
 const styles = StyleSheet.create({
   Stylecontainer: {
     flex: 1,
-    paddingTop: 13,
-    paddingLeft: 13,
-    paddingRight: 13,
-    paddingBottom: 13,
-    backgroundColor: gray
+    paddingTop: 30,
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingBottom: 30,
+    backgroundColor: darkslateblue
   },
   title: {
     fontSize: 35,
     textAlign: 'center',
-    marginBottom: 14,
-    color: green
+    marginBottom: 28,
+    color: navy,
+    fontWeight:'bold'
   }
 });
 

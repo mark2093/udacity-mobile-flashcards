@@ -54,6 +54,7 @@ export class DetailsMain extends Component {
           </CustomTouch>
         </View>
         <CustomButton
+         btnStyle={{ backgroundColor: red, borderColor: white,fontSize: 20 }}
           txtStyle={{ color: red }}
           onPress={() => this.handleDeleteDeck(deck.title)}
         >
