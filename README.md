@@ -1,5 +1,6 @@
 
-Udacity Mobile Flashcards Project for Udacity course work
+<h1>Mobile Flashcards Project for Udacity course work </h1>
+<hr>
 
 <h1> Description </h1>
 <p> A tiny fun game made with Flash Cards </p>
